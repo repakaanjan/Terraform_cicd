@@ -1,4 +1,4 @@
-sudo cd /terraform 
+sudo cd /opt
 sudo curl -fsSL https://get.docker.com -o docker.sh
 sudo chmod 777 *.sh
 sudo sh docker.sh
