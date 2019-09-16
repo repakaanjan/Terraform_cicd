@@ -1,7 +1,7 @@
 sudo cd /terraform 
 sudo curl -fsSL https://get.docker.com -o docker.sh
 sudo chmod 777 *.sh
-sudo sh get-docker.sh
+sudo sh docker.sh
 sudo yum update -y
 sudo yum install wget tar -y
 sudo systemctl  restart  docker && sudo systemctl  enable docker
