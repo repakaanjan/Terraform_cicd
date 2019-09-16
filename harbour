@@ -3,6 +3,7 @@ sudo curl -fsSL https://get.docker.com -o docker.sh
 sudo chmod 777 *.sh
 sudo sh docker.sh
 sudo yum update -y
+sudo usermod -aG docker root
 sudo yum install wget tar -y
 sudo systemctl  restart  docker && sudo systemctl  enable docker
 sudo yum install epel-release  python-pip -y
