@@ -12,3 +12,4 @@ sudo usermod -aG  docker jenkins
 sudo systemctl start docker &&  sudo systemctl enable  docker
 wget -P /opt/  https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
 sudo unzip /opt/sonar-scanner-cli-3.3.0.1492-linux.zip -d /opt  &&  sudo mv /opt/sonar-scanner-3.3.0.1492-linux  /opt/sonar-scanner
+sudo echo "sonar.host.url=http://35.238.100.99:9000" >> /opt/sonar-scanner/conf/sonar-scanner.properties
