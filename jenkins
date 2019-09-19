@@ -1,0 +1,14 @@
+sudo yum -y install epel-release -y 
+sudo yum install java-1.8.0-openjdk -y 
+sudo yum install java-1.8.0-openjdk-devel -y 
+sudo yum -y install wget unzip  -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo systemctl stop firewalld && sudo systemctl disable firewalld 
+sudo yum -y install jenkins maven -y
+sudo systemctl start jenkins &&  sudo systemctl enable  jenkins
+sudo  wget -O  /opt/docker.sh  https://get.docker.com && sudo chmod 755 /opt/docker.sh 
+sudo usermod -aG  docker jenkins
+sudo systemctl start docker &&  sudo systemctl enable  docker
+wget -P /opt/  https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+sudo unzip /opt/sonar-scanner-cli-3.3.0.1492-linux.zip -d /opt  &&  sudo mv /opt/sonar-scanner-3.3.0.1492-linux  /opt/sonar-scanner
