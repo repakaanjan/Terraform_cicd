@@ -2,4 +2,7 @@ sudo systemctl stop firewalld && sudo systemctl disable firewalld
 sudo yum install java-1.8.0-openjdk  java-1.8.0-openjdk-devel -y
 sudo yum install http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm -y
 sudo yum install mysql-server  expect  wget  unzip  -y
-sudo systemctl start mysqld && systemctl enable  mysqld
+sudo systemctl start mysqld && systemctl enable  mysqld  && sudo cd /Terraform_cicd
+sudo chmod 755  /Terraform_cicd/* 
+sudo sh /Terraform_cicd/mysql_reset 
+sudo sh /Terraform_cicd/mysqlcreate_db_user --host=localhost --database=sonardb --user=sonaruser < /Terraform_cicd/mysqlroot_passwd
