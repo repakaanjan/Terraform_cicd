@@ -1,3 +1,4 @@
+sudo systemctl  stop firewalld && sudo systemctl  stop firewalld
 sudo curl -fsSL https://get.docker.com -o docker.sh
 sudo chmod 777 *.sh
 sudo sh docker.sh
@@ -13,4 +14,3 @@ sudo wget -P /opt/   https://storage.googleapis.com/harbor-releases/release-1.8.
 sudo tar -xvf /opt/harbor-online*  -C /opt/
 sudo sed -i 's/hostname: reg.mydomain.com/hostname: 35.188.174.237/g'   /opt/harbor/harbor.yml
 sudo  sh  /opt/harbor/install.sh --with-clair
-
